@@ -1,7 +1,5 @@
-import Nav from "./Nav";
-import Header from "./Header";
-import styles from "../styles/Layout.module.css";
-import Weekday from "./Weekday";
+import Nav from "./Nav"; 
+import styles from "../styles/Layout.module.css"; 
 
 export default function Layout({ children }) {
   return (
@@ -9,14 +7,8 @@ export default function Layout({ children }) {
       <Nav />
       <div className={styles.container}>
         <main className={styles.main}> 
-          <div className="calendar">
-            <Header />
-            <Weekday />
-          </div> 
-          <div className="dayInfo">
-            {children}
-          </div>
           
+           {children}
           
         </main>
       </div>

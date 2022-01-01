@@ -15,3 +15,17 @@ a {
   box-sizing: border-box;
 }
 
+
+.calendar {
+  display: flex;  
+}
+
+.weekView {
+  
+}
+
+.dayInfo {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
