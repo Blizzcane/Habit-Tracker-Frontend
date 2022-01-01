@@ -1,0 +1,13 @@
+.card {
+    border-radius: 10px;
+    background: violet;
+    margin: 10px;
+}
+
+.title{
+    margin: 5px;
+}
+
+.card p {
+    margin: 3px;
+}
