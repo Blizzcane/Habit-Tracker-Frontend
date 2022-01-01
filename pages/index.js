@@ -1,4 +1,5 @@
 import Head from "next/head";
+import DayDetail from "../components/DayDetail";
 import Header from "../components/Header";
 import Weekday from "../components/Weekday";
 
@@ -15,8 +16,8 @@ export default function Home({ articles }) {
           <Header />
           <Weekday />
         </div>
-        <div className="dayInfo">
-          <h1>Welcome</h1>
+        <div className="dayInfo"> 
+          <DayDetail />
         </div>
       </div>
     </div>
