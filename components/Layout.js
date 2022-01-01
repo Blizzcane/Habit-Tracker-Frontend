@@ -8,15 +8,16 @@ export default function Layout({ children }) {
     <>
       <Nav />
       <div className={styles.container}>
-        <main className={styles.main}>
-          <Header />
-          {/* this will hold the calender in the layout */}
+        <main className={styles.main}> 
           <div className="calendar">
-            {/* this will show the day in a detailed view */}
-            <div className="dayInfo"></div>
+            <Header />
+            <Weekday />
+          </div> 
+          <div className="dayInfo">
+            {children}
           </div>
-          <Weekday />
-          {children}
+          
+          
         </main>
       </div>
     </>
