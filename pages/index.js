@@ -1,5 +1,4 @@
-import Head from "next/head";   
-import ArticleList from "../components/ArticleList";
+import Head from "next/head";    
 
 export default function Home({ articles }) { 
   return (
@@ -10,8 +9,7 @@ export default function Home({ articles }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>    
 
-      <h1>Welcome</h1>
-      <ArticleList articles={articles}/>
+      <h1>Welcome</h1> 
     </div>
   );
 }
