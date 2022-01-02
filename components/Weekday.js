@@ -3,7 +3,7 @@ import HabitRow from "./HabitRow";
 
 export default function Weekday() {
   return (
-    <table>
+    <table >
       <tr>
         <td></td>
         <th scope="col">Mon</th>
