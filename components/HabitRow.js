@@ -4,7 +4,7 @@ import styles from "../styles/HabitRow.module.css";
 export default function HabitRow({ day, habit }) {
   return (
     <tr>
-      <th scope="row">Habit name</th>
+      <th scope="row">{habit.habit_name}</th>
       <td>
         <div className={styles.box}></div>
       </td>

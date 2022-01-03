@@ -1,9 +1,9 @@
 import styles from "../styles/Weekday.module.css";
 import HabitRow from "./HabitRow";
 
-export default function Weekday() {
+export default function Weekday({ habits }) {
   return (
-    <table >
+    <table>
       <tr>
         <td></td>
         <th scope="col">Mon</th>
@@ -11,9 +11,10 @@ export default function Weekday() {
         <th scope="col">Wed</th>
         <th scope="col">Thu</th>
         <th scope="col">Fri</th>
-      </tr>
-      <HabitRow />
-      
+      </tr> 
+      {habits.data.map((habit) => {
+        return <HabitRow habit={habit} /> ;
+      })}
     </table>
   );
 }

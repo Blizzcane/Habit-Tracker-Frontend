@@ -3,7 +3,7 @@ import DayDetail from "../components/DayDetail";
 import Header from "../components/Header";
 import Weekday from "../components/Weekday";
 
-export default function Home({ articles }) {
+export default function Home({ habits }) {
   return (
     <div>
       <Head>
@@ -14,7 +14,7 @@ export default function Home({ articles }) {
       <div className="calendar"> 
         <div className="weekView">
           <Header />
-          <Weekday />
+          <Weekday habits={habits}/>
         </div>
         <div className="dayInfo"> 
           <DayDetail />
@@ -26,13 +26,13 @@ export default function Home({ articles }) {
 
 export const getStaticProps = async () => {
   const res = await fetch(
-    "https://jsonplaceholder.typicode.com/posts?_limit=6"
+    "http://localhost:5000/habits"
   );
-  const articles = await res.json();
+  const habits = await res.json();
 
   return {
     props: {
-      articles,
+      habits ,
     },
   };
 };
