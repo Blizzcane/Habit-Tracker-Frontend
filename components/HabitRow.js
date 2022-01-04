@@ -2,27 +2,9 @@ import styles from "../styles/HabitRow.module.css";
 
 //this component will return a row for the weekly calendar for a habit
 export default function HabitRow({ day, habit }) {
- 
   const isComplete = (day) => {
-    if (day) {
-      return completeColor(habit.habit_color);
-    } else {
-      return incompleteColor(habit.habit_color);
-    }
-  };
-
-  const completeColor = (hexCode) => {
     return {
-      background: `#dae4f5`,
-      width: "30px",
-      height: "30px",
-      borderRadius: "5px",
-    };
-  };
-
-  const incompleteColor = (hexCode) => {
-    return {
-      background: `#${hexCode}`,
+      background: `#${day ? habit.habit_color : "dae4f5"}`,
       width: "30px",
       height: "30px",
       borderRadius: "5px",
