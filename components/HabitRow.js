@@ -13,7 +13,7 @@ export default function HabitRow({ day, habit }) {
 
   const completeColor = (hexCode) => {
     return {
-      background: `#${hexCode}`,
+      background: `#dae4f5`,
       width: "30px",
       height: "30px",
       borderRadius: "5px",
