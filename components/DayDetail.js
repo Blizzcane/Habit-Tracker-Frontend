@@ -4,10 +4,10 @@ import DayHeader from "./DayHeader";
 
  
 
-export default function DayDetail({habits}) {
+export default function DayDetail({habits, day, setDay}) {
     return (
         <div>
-            <DayHeader />
+            <DayHeader day={day} setDay={setDay} />
             <HabitCard />
         </div>
     )

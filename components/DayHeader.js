@@ -1,21 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "../styles/DayHeader.module.css";
 
-export default function DayHeader() {
-  const [day, setDay] = useState("Sunday");
+export default function DayHeader({ day, setDay }) {
   const [date, setDate] = useState(0);
 
-  const tomorrow = () => {
+  useEffect(() => {
+    setDay(getDay(date));
+  }, [date]);
+ 
+  const tomorrow = () => { 
     if (date + 1 !== 7) {
       setDate(date + 1);
     }
-    setDay(getDay(date));
-  };
+    };
+    
   const yesterday = () => {
     if (date - 1 !== -1) {
       setDate(date - 1);
     }
-    setDay(getDay(date));
   };
 
   const getDay = (val) => {

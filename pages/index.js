@@ -1,10 +1,11 @@
 import Head from "next/head";
+import { useState } from "react";
 import DayDetail from "../components/DayDetail";
 import Header from "../components/Header";
 import Weekday from "../components/Weekday";
 
 export default function Home({ habits }) {
-  
+  const [day, setDay] = useState("Sunday");
 
   return (
     <div>
@@ -19,7 +20,7 @@ export default function Home({ habits }) {
           <Weekday habits={habits} />
         </div>
         <div className="dayInfo">
-          <DayDetail habits={habits} />
+          <DayDetail habits={habits} day={day} setDay={setDay} />
         </div>
       </div>
     </div>
