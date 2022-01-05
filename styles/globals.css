@@ -15,9 +15,8 @@ a {
   box-sizing: border-box;
 }
 
-
 .calendar {
-  display: flex;  
+  display: flex;
   justify-content: space-between;
 }
 
@@ -30,12 +29,20 @@ a {
 
 .dayInfo {
   display: flex;
-  width: 30%; 
+  width: 30%;
   flex-direction: column;
-  flex: 1 1 auto; 
+  flex: 1 1 auto;
   overflow: hidden;
 }
 
 table {
   table-layout: fixed;
+}
+
+table td {
+  text-align: center;
+}
+
+table td div {
+  margin: 5px auto;
 }

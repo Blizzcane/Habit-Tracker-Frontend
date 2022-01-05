@@ -2,38 +2,51 @@ import styles from "../styles/HabitRow.module.css";
 
 //this component will return a row for the weekly calendar for a habit
 export default function HabitRow({ day, habit }) {
+  const {
+    Sun,
+    Mon,
+    Tue,
+    Wed,
+    Thu,
+    Fri,
+    Sat,
+    habit_name,
+    description,
+    habit_color,
+  } = habit;
+
   const isComplete = (day) => {
     return {
-      background: `#${day ? habit.habit_color : "dae4f5"}`,
+      background: `#${day ? habit_color : "dae4f5"}`,
       width: "30px",
       height: "30px",
-      borderRadius: "5px",
+      borderRadius: "5px",  
     };
   };
 
   return (
     <tr>
-      <th scope="row">{habit.habit_name}</th>
+      <th scope="row">{habit_name}</th>
       <td>
-        <div style={isComplete(habit.Sun)}></div>
+        <div style={isComplete(Sun)}></div>
       </td>
       <td>
-        <div style={isComplete(habit.Mon)}></div>
+        <div style={isComplete(Mon)}></div>
       </td>
       <td>
-        <div style={isComplete(habit.Tue)}></div>
+        <div style={isComplete(Tue)}></div>
       </td>
       <td>
-        <div style={isComplete(habit.Wed)}></div>
+        <div style={isComplete(Wed)}></div>
       </td>
       <td>
-        <div style={isComplete(habit.Thu)}></div>
+        <div style={isComplete(Thu)}></div>
       </td>
       <td>
-        <div style={isComplete(habit.Fri)}></div>
+        <div style={isComplete(Fri)}></div>
       </td>
       <td>
-        <div style={isComplete(habit.Sat)}></div>
+        <div style={isComplete(Sat)}></div>
       </td>
       <td>total</td>
     </tr>
