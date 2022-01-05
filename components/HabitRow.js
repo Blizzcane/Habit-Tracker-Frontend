@@ -16,12 +16,14 @@ export default function HabitRow({ day, habit }) {
   } = habit;
 
   const isComplete = (day) => {
-    return {
-      background: `#${day ? habit_color : "dae4f5"}`,
-      width: "30px",
-      height: "30px",
-      borderRadius: "5px",  
-    };
+    if (day !== null) {
+      return {
+        background: `#${day ? habit_color : "dae4f5"}`,
+        width: "30px",
+        height: "30px",
+        borderRadius: "5px",
+      };
+    }
   };
 
   return (
