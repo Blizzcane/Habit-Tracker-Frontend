@@ -6,14 +6,15 @@ import Weekday from "../components/Weekday";
 
 export default function Home({ habits }) {
   const [day, setDay] = useState("Sunday");
-  const [dailyRoutine, setDailyRoutine] = useState({});
+  const [dailyHabits, setDailyHabits] = useState({});
 
-  const getDailyRoutine = async () => { 
+  const getDailyRoutine = async () => {
     try {
-      const res = await fetch(`http://localhost:5000/habits/${day.slice(0,3)}`);
+      const res = await fetch(
+        `http://localhost:5000/habits/${day.slice(0, 3)}`
+      );
       const habits = await res.json();
-      setDailyRoutine(habits.data);
-      console.log(dailyRoutine);
+      setDailyHabits(habits.data); 
     } catch (error) {
       console.error("Error:", error);
     }
@@ -40,7 +41,7 @@ export default function Home({ habits }) {
           <Weekday habits={habits} />
         </div>
         <div className="dayInfo">
-          <DayDetail habits={habits} day={day} setDay={setDay} />
+          <DayDetail day={day} setDay={setDay} dailyHabits={dailyHabits} />
         </div>
       </div>
     </div>
