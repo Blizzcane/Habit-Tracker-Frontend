@@ -1,13 +1,18 @@
 .card {
-    border-radius: 10px;
-    background: violet;
-    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.titleBlock{
+
 }
 
 .title{
     margin: 5px;
 }
 
-.card p {
-    margin: 3px;
-}
+.spaced {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+} 
