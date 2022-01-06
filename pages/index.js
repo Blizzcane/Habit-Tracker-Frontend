@@ -6,7 +6,7 @@ import Weekday from "../components/Weekday";
 
 export default function Home({ habits }) {
   const [day, setDay] = useState("Sunday");
-  const [dailyHabits, setDailyHabits] = useState({});
+  const [dailyHabits, setDailyHabits] = useState([]);
 
   const getDailyRoutine = async () => {
     try {
