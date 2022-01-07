@@ -3,6 +3,21 @@ import styles from "../styles/HabitCard.module.css";
 export default function HabitCard({ habit, day }) {
   day = day.slice(0, 3);
 
+//   useEffect(() => { 
+//     async function updatePost() {
+//         const requestOptions = {
+//             method: 'PUT',
+//             headers: { 'Content-Type': 'application/json' },
+//             body: JSON.stringify({ title: 'React Hooks PUT Request Example' })
+//         };
+//         const response = await fetch('https://jsonplaceholder.typicode.com/posts/1', requestOptions);
+//         const data = await response.json();
+//         setPostId(data.id);
+//     }
+
+//     updateHabit();
+// }, []);
+ 
   const completedCard = {
     borderRadius: "10px",
     background: `#${habit.habit_color}`,
@@ -14,6 +29,7 @@ export default function HabitCard({ habit, day }) {
     margin: "10px",
     borderLeft: `3px solid #${habit.habit_color}`,
   };
+ 
 
   const markCompleteBtn = () => {
     return <button>Mark Complete</button>;

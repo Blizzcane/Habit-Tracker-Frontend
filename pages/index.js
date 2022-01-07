@@ -4,6 +4,11 @@ import DayDetail from "../components/DayDetail";
 import Header from "../components/Header";
 import Weekday from "../components/Weekday";
 
+const API_BASE_URL =
+  process.env.API_BASE_URL || "http://localhost:5000";
+
+console.log("base:",API_BASE_URL);
+
 export default function Home({ habits }) {
   const [day, setDay] = useState("Sunday");
   const [dailyHabits, setDailyHabits] = useState([]);
@@ -11,7 +16,7 @@ export default function Home({ habits }) {
   const getDailyRoutine = async () => {
     try {
       const res = await fetch(
-        `http://localhost:5000/habits/${day.slice(0, 3)}`
+        `${API_BASE_URL}/habits/${day.slice(0, 3)}`
       );
       const habits = await res.json();
       setDailyHabits(habits.data); 
@@ -49,7 +54,7 @@ export default function Home({ habits }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:5000/habits");
+  const res = await fetch(`${API_BASE_URL}/habits`);
   const habits = await res.json();
 
   return {
