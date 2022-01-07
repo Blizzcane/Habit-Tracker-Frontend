@@ -4,7 +4,7 @@ import DayDetail from "../components/DayDetail";
 import Header from "../components/Header";
 import Weekday from "../components/Weekday";
 
-const API_BASE_URL =
+export const API_BASE_URL =
   process.env.API_BASE_URL || "http://localhost:5000";
 
 console.log("base:",API_BASE_URL);

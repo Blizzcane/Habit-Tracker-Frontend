@@ -7,7 +7,7 @@ export default function DayDetail({ dailyHabits , day, setDay }) {
     <div>
       <DayHeader day={day} setDay={setDay} />
       {dailyHabits.map((habit) => {
-          return <HabitCard habit={habit} day={day}/>;
+          return <HabitCard key={habit.habit_id} habit={habit} day={day}/>;
       })}
     </div>
   );
