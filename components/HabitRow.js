@@ -18,7 +18,7 @@ export default function HabitRow({ day, habit }) {
   const isComplete = (day) => {
     if (day !== null) {
       return {
-        background: `#${day ? habit_color : "dfefef"}`,
+        background: `#${day ? habit_color : "ededed"}`,
         width: "30px",
         height: "30px",
         borderRadius: "5px",

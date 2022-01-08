@@ -1,14 +1,16 @@
 .container {
   padding: 0 2rem; 
-  background: cornflowerblue; 
+  background: rgb(123, 165, 156); 
 }
 
 .main {
   min-height: 100vh;
   background: white; 
-  padding: 2rem 0;  
+  padding: 20px;  
   font-size: 1.25rem;
-  border-radius: 25px
+  border-radius: 25px;
+  max-width: 90%; 
+  margin: auto; 
 }
 
 

@@ -19,6 +19,7 @@ export default function HabitCard({ habit, day }) {
   //     updateHabit();
   // }, []);
   const updateHabit = async () => {
+    
     const requestOptions = {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
@@ -34,23 +35,26 @@ export default function HabitCard({ habit, day }) {
     borderRadius: "10px",
     background: `#${habit.habit_color}`,
     margin: "10px",
+    color: "white",
+    padding: "0px 5px"
   };
   const inCompletedCard = {
     borderRadius: "4px",
     background: `#FFF`,
     margin: "10px",
     borderLeft: `3px solid #${habit.habit_color}`,
+    
   };
 
   const markCompleteBtn = () => {
-    return <button onClick={updateHabit}>Mark Complete</button>;
+    return <p className={styles.btn}  onClick={updateHabit}>Mark Complete</p>;
   };
 
   const completedUI = () => {
     return (
       <div className={styles.spaced}>
-        <p>Complete</p>
-        <button onClick={updateHabit}>Undo</button>
+        <p>&#10003; Completed</p>
+        <p className={styles.btn} onClick={updateHabit}>Undo</p>
       </div>
     );
   };

@@ -1,0 +1,17 @@
+.title {
+}
+
+.body {
+  display: flex;
+  max-width: 500px;
+  flex-direction: column;
+  margin: 20px; 
+  margin: auto;
+}
+
+.form {
+}
+
+.inputs {
+  margin: 5px;
+}
