@@ -21,7 +21,9 @@
      flex-grow: 1;
      margin-right: 10px;
  }
-
+.form input{
+  height: 30px;
+}
 .create {
   width: 100%;
 }

@@ -33,7 +33,7 @@ export default function ColorPicker({ color, setColor }) {
     default: {
       color: {
         width: "36px",
-        height: "14px",
+        height: "18px",
         borderRadius: "2px",
         background: ` ${color}`,
       },
