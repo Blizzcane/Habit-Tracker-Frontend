@@ -21,14 +21,13 @@ export default function HabitCard({ habit, day }) {
   const updateHabit = async () => {
     const requestOptions = {
       method: "PUT",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         data: { id: habit.habit_id, day: day, status: !habit[day] },
       }),
     };
     console.log("sending:", requestOptions);
-    const res = await fetch(`${API_BASE_URL}/habits/${day}`, requestOptions);
-    const data = await res.json();
-    console.log("data:", data);
+    await fetch(`${API_BASE_URL}/habits/${day}`, requestOptions);
   };
 
   const completedCard = {
@@ -51,7 +50,7 @@ export default function HabitCard({ habit, day }) {
     return (
       <div className={styles.spaced}>
         <p>Complete</p>
-        <button>Undo</button>
+        <button onClick={updateHabit}>Undo</button>
       </div>
     );
   };

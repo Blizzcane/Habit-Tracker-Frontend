@@ -7,11 +7,11 @@ import Weekday from "../components/Weekday";
 export const API_BASE_URL =
   process.env.API_BASE_URL || "http://localhost:5000";
 
-console.log("base:",API_BASE_URL);
+// console.log("base:",API_BASE_URL);
 
 export default function Home({ habits }) {
   const [day, setDay] = useState("Sunday");
-  const [dailyHabits, setDailyHabits] = useState([]);
+  const [dailyHabits, setDailyHabits] = useState([]); 
 
   const getDailyRoutine = async () => {
     try {
