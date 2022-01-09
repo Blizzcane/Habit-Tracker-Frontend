@@ -33,7 +33,7 @@ export default function HabitCard({ habit, day }) {
 
   const completedCard = {
     borderRadius: "10px",
-    background: `#${habit.habit_color}`,
+    background: `${habit.habit_color}`,
     margin: "10px",
     color: "white",
     padding: "0px 5px"
@@ -42,7 +42,7 @@ export default function HabitCard({ habit, day }) {
     borderRadius: "4px",
     background: `#FFF`,
     margin: "10px",
-    borderLeft: `3px solid #${habit.habit_color}`,
+    borderLeft: `3px solid ${habit.habit_color}`,
     
   };
 

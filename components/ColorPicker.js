@@ -2,7 +2,7 @@ import { useState } from "react";
 import reactCSS from "reactcss";
 import { TwitterPicker } from "react-color";
 
-export default function ColorPicker({ color, setColor }) {
+export default function ColorPicker({formData, setFormData }) {
   const [displayColorPicker, setDisplayColorPicker] = useState(false);
 
   const defaultColors = [
@@ -27,7 +27,10 @@ export default function ColorPicker({ color, setColor }) {
   };
 
   const handleColorChange = (color) => {
-    setColor(color.hex);
+    setFormData({
+      ...formData,
+      habit_color: color.hex
+    }); 
   };
   const styles = reactCSS({
     default: {
@@ -35,7 +38,7 @@ export default function ColorPicker({ color, setColor }) {
         width: "36px",
         height: "18px",
         borderRadius: "2px",
-        background: ` ${color}`,
+        background: ` ${formData.habit_color}`,
       },
       swatch: {
         padding: "5px",
@@ -68,7 +71,7 @@ export default function ColorPicker({ color, setColor }) {
           <div style={styles.cover} onClick={handleClose} />
           <TwitterPicker
             colors={defaultColors}
-            color={color}
+            color={formData.habit_color}
             onChange={handleColorChange}
           />
         </div>
