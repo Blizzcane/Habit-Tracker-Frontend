@@ -7,7 +7,7 @@ import Weekday from "../components/Weekday";
 
 export const API_BASE_URL = process.env.API_BASE_URL || "https://habit-tracking-server.herokuapp.com";
 
-// console.log("base:",API_BASE_URL);
+// console.log("base:",API_BASE_URL); 
 
 export default function Home({ habits }) {
   const [day, setDay] = useState("Sunday");
