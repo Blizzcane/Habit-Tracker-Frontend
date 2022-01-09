@@ -80,3 +80,7 @@ table td div {
   background-color: var(--button-color);
 }
  
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}

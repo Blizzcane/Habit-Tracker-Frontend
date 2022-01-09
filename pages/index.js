@@ -41,14 +41,14 @@ export default function Home({ habits }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="calendar">
-        <div className="weekView">
+        <div style={{ overflowY: 'scroll', height: '100vh' }} className="weekView">
           <Header />
           <Link href="/addHabit">
             <a className="addHabit" id="add-habit">&#43; Add Habit</a>
           </Link>
           <Weekday habits={habits} />
         </div>
-        <div className="dayInfo">
+        <div style={{ overflowY: 'scroll', height: '100vh' }} className="dayInfo">
           <DayDetail day={day} setDay={setDay} dailyHabits={dailyHabits} />
         </div>
       </div>

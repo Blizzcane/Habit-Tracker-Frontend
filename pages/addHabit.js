@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ColorPicker from "../components/ColorPicker";
 import styles from "../styles/AddHabit.module.css";
+import { API_BASE_URL } from "./index";
 
 export default function addHabit() {
   const [formData, setFormData] = useState({

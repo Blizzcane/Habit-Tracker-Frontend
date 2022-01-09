@@ -13,7 +13,7 @@ export default function HabitRow({ day, habit }) {
     habit_name,
     description,
     habit_color,
-  } = habit;
+  } = habit; 
 
   const isComplete = (day) => {
     if (day !== null) {
