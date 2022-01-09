@@ -47,15 +47,19 @@ export default function Form() {
     event.preventDefault();
 
     const requestOptions = {
-      method: "POST",
+      method: id ? "PUT" : "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         data: formData,
       }),
     };
-
-    console.log("Creating new habit");
-    await fetch(`${API_BASE_URL}/habits`, requestOptions);
+ 
+    if (id) {
+      await fetch(`${API_BASE_URL}/habits/${id}`, requestOptions);
+    } else {
+      await fetch(`${API_BASE_URL}/habits`, requestOptions);
+    }
+    router.push('/');
   }
 
   return (
