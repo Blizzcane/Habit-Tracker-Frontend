@@ -54,9 +54,16 @@ export default function HabitCard({ getDailyRoutine, habit, day }) {
   };
 
   const deleteHabit = () => {
-    let result = confirm(`Are you sure you want to delete ${habit.habit_name}?`);
-    if (result) {
-      //Logic to delete the item
+    let confirmed = confirm(
+      `Are you sure you want to delete ${habit.habit_name}?`
+    );
+    if (confirmed) {
+      console.log("fetching");
+      fetch(`${API_BASE_URL}/habits/${habit.habit_id}`, {
+        method: "DELETE",
+      })
+        .then(() => router.push("/"))
+        .catch((err) => console.log(err));
     }
   };
 
@@ -74,7 +81,7 @@ export default function HabitCard({ getDailyRoutine, habit, day }) {
             <Link href={`/habits/${habit.habit_id}`}>
               <a>Edit</a>
             </Link>
-            <a onClick={deleteHabit}>Delete</a> 
+            <a onClick={deleteHabit}>Delete</a>
           </div>
         </div>
       </div>
