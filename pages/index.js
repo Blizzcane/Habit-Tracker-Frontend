@@ -69,7 +69,7 @@ export default function Home({ habits }) {
   );
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async (context) => {
   const res = await fetch(`${API_BASE_URL}/habits`);
   const habits = await res.json();
 
