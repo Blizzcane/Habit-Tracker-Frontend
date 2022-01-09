@@ -1,0 +1,44 @@
+ 
+
+.formDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin: 5px 0px;
+}
+ .inputs{
+     flex-basis: 300px;
+     flex-grow: 1;
+     margin-right: 10px;
+ }
+.form input{
+  height: 30px;
+}
+.create {
+  width: 100%;
+}
+
+.weekDays {
+  display: none !important;
+}
+
+.weekDays + .label {
+  display: inline-block;
+  border-radius: 5px;
+  border: solid thin rgb(0, 116, 194);
+  background: #ffffff;
+  height: 40px;
+  flex-basis: 50px;
+  flex-grow: 1;
+  color: rgb(0, 116, 194);
+  margin-right: 3px;
+  line-height: 35px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.weekDays[type="checkbox"]:checked + .label {
+  background: #05add7;
+  color: #ffffff;
+}

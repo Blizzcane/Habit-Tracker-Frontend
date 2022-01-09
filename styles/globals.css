@@ -84,3 +84,9 @@ table td div {
   width: 0px;
   background: transparent; /* make scrollbar transparent */
 }
+
+/* dot menu */
+.test:after { 
+  content: '\2807';
+  font-size: 30px;
+  }

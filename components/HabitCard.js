@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "../styles/HabitCard.module.css";
 import { API_BASE_URL } from "../pages/index";
 
@@ -35,14 +36,13 @@ export default function HabitCard({ habit, day }) {
     borderRadius: "10px",
     background: `${habit.habit_color}`,
     margin: "10px",
-    color: "white",
-    padding: "0px 5px"
+    color: "white", 
   };
   const inCompletedCard = {
     borderRadius: "4px",
     background: `#FFF`,
     margin: "10px",
-    borderLeft: `3px solid ${habit.habit_color}`,
+    borderLeft: `5px solid ${habit.habit_color}`,
     
   };
 
@@ -52,12 +52,13 @@ export default function HabitCard({ habit, day }) {
 
   const completedUI = () => {
     return (
-      <div className={styles.spaced}>
+      <div className={styles.spacedBottom}>
         <p>&#10003; Completed</p>
         <p className={styles.btn} onClick={updateHabit}>Undo</p>
       </div>
     );
   };
+  
 
   return (
     <div
@@ -65,8 +66,11 @@ export default function HabitCard({ habit, day }) {
       style={habit[day] ? completedCard : inCompletedCard}
     >
       <div className={styles.spaced}>
-        <h4 className={styles.title}>{habit.habit_name}</h4>{" "}
-        <button>...</button>
+        <h4 className={styles.title}>{habit.habit_name}</h4> 
+        <div className="test"></div>
+        <Link href={`/habits/${habit.habit_id}`}>
+            <a>Edit</a>
+          </Link>
       </div>
       {habit[day] ? completedUI() : markCompleteBtn()}
     </div>
