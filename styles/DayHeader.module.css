@@ -1,3 +1,32 @@
 .day {
-    margin: 10px;
+  margin: 10px;
+  flex-grow: 2;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.arrowContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.arrowBtn {
+  align-self: center;
+  width: 50px;
+  flex-grow: 1;
+  height: 30px;
+  font-size: 1.2rem;
+  border-color: rgba(128, 160, 255, 0.158);
+  border-radius: 10px;
+  margin: 0px 10px;
+  background-color: rgb(240, 240, 240);
+}
+
+.arrowBtn:hover {
+  background-color: rgb(153, 169, 185);
 }

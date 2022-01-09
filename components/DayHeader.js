@@ -7,13 +7,13 @@ export default function DayHeader({ day, setDay }) {
   useEffect(() => {
     setDay(getDay(date));
   }, [date]);
- 
-  const tomorrow = () => { 
+
+  const tomorrow = () => {
     if (date + 1 !== 7) {
       setDate(date + 1);
     }
-    };
-    
+  };
+
   const yesterday = () => {
     if (date - 1 !== -1) {
       setDate(date - 1);
@@ -40,11 +40,19 @@ export default function DayHeader({ day, setDay }) {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <h3 className={styles.day}>{day}</h3>
-      <button onClick={yesterday}> Back </button>
+      <div className={styles.arrowContainer}>
+        <button className={styles.arrowBtn} onClick={yesterday}>
+          {" "}
+          &#171;{" "}
+        </button>
 
-      <button onClick={tomorrow}> Next </button>
+        <button className={styles.arrowBtn} onClick={tomorrow}>
+          {" "}
+          &#187;{" "}
+        </button>
+      </div>
     </div>
   );
 }
