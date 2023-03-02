@@ -5,7 +5,7 @@ import DayDetail from "../components/DayDetail";
 import Header from "../components/Header";
 import Weekday from "../components/Weekday";
 
-export const API_BASE_URL = process.env.API_BASE_URL || "https://habit-tracking-server.herokuapp.com";
+export const API_BASE_URL = process.env.API_BASE_URL || "https://habittracker-ynxq.onrender.com";
 
 // console.log("base:",API_BASE_URL); 
 
